@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Bloody Balcony</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" style="width: 960px; height: 600px; background: #231F20"></canvas>
+    <script src="Build/techcheck1.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/techcheck1.data.gz",
+        frameworkUrl: "Build/techcheck1.framework.js.gz",
+        codeUrl: "Build/techcheck1.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Team7",
+        productName: "Bloody Balcony",
+        productVersion: "0.2",
+      });
+    </script>
+  </body>
+</html>

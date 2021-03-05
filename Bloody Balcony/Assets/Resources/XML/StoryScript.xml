@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Story>
+	<!--[Start]-->
+	<Chapter1>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  </Line>
+			<Line>Duis aute irure dolor in reprehenderit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> .. </OptionText>
+					<AfterText> .. </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter..</NextChapter>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText> .. </OptionText>
+					<AfterText> .. </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter..</NextChapter>
+			</Option2>
+			<Option3>
+				<Text>
+					<OptionText> .. </OptionText>
+					<AfterText> .. </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter..</NextChapter>
+			</Option3>
+		</Options>
+	</Chapter1>
+	
+	
+	<!--Chapter Template
+	<Chapter..>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>..</Line>
+			<Line>..</Line>
+			<Line>..</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>					
+					<OptionText> .. </OptionText>
+					<AfterText> .. </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter..</NextChapter>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText> .. </OptionText>
+					<AfterText> .. </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter..</NextChapter>
+			</Option2>
+			<Option3>
+				<Text>
+					<OptionText> .. </OptionText>
+					<AfterText> .. </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter..</NextChapter>
+			</Option3>
+		</Options>
+	</Chapter..>
+	-->
+
+	<!--Template Example2-->
+	<!--Chapter Template Example2
+	<Chapter..>
+		<ChapterInfo> Timed </ChapterInfo>
+		<Lines>
+			<Line>..</Line>
+			<Line>..</Line>
+			<Line>..</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>					
+					<OptionText> .. </OptionText>
+					<AfterText> .. </AfterText>
+				</Text>
+				<prerequirement> SecretRoom </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter..</NextChapter>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText> .. </OptionText>
+					<AfterText> .. </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter..</NextChapter>
+			</Option2>
+			<Option3>
+				<Text>
+					<OptionText> .. </OptionText>
+					<AfterText> .. </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter..</NextChapter>
+			</Option3>
+		</Options>
+	</Chapter..>
+	-->
+</Story>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Story>
+	<!--[Start]-->
+	<Chapter1>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>Chapter1, normal - line 1 </Line>
+			<Line>Line 2</Line>
+			<Line>This is line 3</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> Option1 </OptionText>
+					<AfterText> Option1 was choosen </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter2</NextChapter>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText> Option2 </OptionText>
+					<AfterText> Option2 was choosen </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter2</NextChapter>
+			</Option2>
+			<Option3>
+				<Text>
+					<OptionText> Option3 </OptionText>
+					<AfterText> Option3 was choosen </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter2</NextChapter>
+			</Option3>
+		</Options>
+	</Chapter1>
+	<Chapter2>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>Chapter2, normal - line 1 </Line>
+			<Line>Line 2</Line>
+			<Line>This is line 3</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> Option1 - secret door </OptionText>
+					<AfterText> Option1, secret door discovered </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> door </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter3A</NextChapter>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText> Option2 - ignore door </OptionText>
+					<AfterText> Option2, rip door </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter3B</NextChapter>
+			</Option2>
+		</Options>
+	</Chapter2>
+	<Chapter3A>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>Chapter3A, normal - line 1 </Line>
+			<Line>Line 2</Line>
+			<Line>This is line 3</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> Option1 </OptionText>
+					<AfterText> Option1 was choosen </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter4</NextChapter>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText> Option2 </OptionText>
+					<AfterText> Option2 was choosen </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter4</NextChapter>
+			</Option2>
+		</Options>
+	</Chapter3A>
+	<Chapter3B>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>Chapter3B, normal - line 1 </Line>
+			<Line>Line 2</Line>
+			<Line>This is line 3</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> Option1 </OptionText>
+					<AfterText> Option1 was choosen </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter4</NextChapter>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText> Option2 </OptionText>
+					<AfterText> Option2 was choosen </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter4</NextChapter>
+			</Option2>
+		</Options>
+	</Chapter3B>
+	<Chapter4>
+		<ChapterInfo> Timed </ChapterInfo>
+		<Lines>
+			<Line>Chapter4, Timed - line 1 </Line>
+			<Line>Line 2</Line>
+			<Line>This is line 3</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> Option1, secret room </OptionText>
+					<AfterText> Option1 was choosen </AfterText>
+				</Text>
+				<prerequirement> door </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Ending1</NextChapter>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText> Option2 </OptionText>
+					<AfterText> Option2 was choosen </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter5A</NextChapter>
+			</Option2>
+			<Option3>
+				<Text>
+					<OptionText> Option3 </OptionText>
+					<AfterText> Option3 was choosen </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter5B</NextChapter>
+			</Option3>
+			<Option4>
+				<Text>
+					<OptionText> Timeout </OptionText>
+					<AfterText> Option was timed out </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Ending3</NextChapter>
+			</Option4>
+		</Options>
+	</Chapter4>
+
+	<Chapter5A>
+		<ChapterInfo> Timed </ChapterInfo>
+		<Lines>
+			<Line>Chapter5A, timed - line 1 </Line>
+			<Line>Line 2</Line>
+			<Line>This is line 3</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> Option1 </OptionText>
+					<AfterText> Option1 was choosen </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Ending2</NextChapter>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText> Option2 </OptionText>
+					<AfterText> Option2 was choosen </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Ending2</NextChapter>
+			</Option2>
+			<Option3>
+				<Text>
+					<OptionText> Timeout </OptionText>
+					<AfterText> Option was timed out </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Ending3</NextChapter>
+			</Option3>
+		</Options>
+	</Chapter5A>
+	<Chapter5B>
+		<ChapterInfo> Timed </ChapterInfo>
+		<Lines>
+			<Line>Chapter5B, timed - line 1 </Line>
+			<Line>Line 2</Line>
+			<Line>This is line 3</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> Option1 </OptionText>
+					<AfterText> Option1 was choosen </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Ending2</NextChapter>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText> Option2 </OptionText>
+					<AfterText> Option2 was choosen </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Ending2</NextChapter>
+			</Option2>
+			<Option3>
+				<Text>
+					<OptionText> Timeout </OptionText>
+					<AfterText> Option was timed out </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Ending3</NextChapter>
+			</Option3>
+		</Options>
+	</Chapter5B>
+	
+	
+	<!-- endings-->
+	<Ending1>
+		<ChapterInfo> Ending </ChapterInfo>
+		<Lines>
+			<Line>Ending1 (secret room) - line 1 </Line>
+			<Line>Line 2</Line>
+			<Line>This is line 3</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> EndChapter </OptionText>
+					<AfterText> Chapter ended </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>END1</NextChapter>
+			</Option1>
+		</Options>
+	</Ending1>
+	<Ending2>
+		<ChapterInfo> Ending </ChapterInfo>
+		<Lines>
+			<Line>Ending2 - line 1 </Line>
+			<Line>Line 2</Line>
+			<Line>This is line 3</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> EndChapter </OptionText>
+					<AfterText> Chapter ended </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>END2</NextChapter>
+			</Option1>
+		</Options>
+	</Ending2>
+	<Ending3>
+		<ChapterInfo> Ending </ChapterInfo>
+		<Lines>
+			<Line>Ending3 (timeout)- line 1 </Line>
+			<Line>Line 2</Line>
+			<Line>This is line 3</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> EndChapter </OptionText>
+					<AfterText> Chapter ended </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>END3</NextChapter>
+			</Option1>
+		</Options>
+	</Ending3>
+
+</Story>
