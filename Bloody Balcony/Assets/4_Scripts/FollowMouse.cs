@@ -3,29 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FollowMouse : MonoBehaviour{
-
-	private Vector3 mousePosition;
+	public bool moveable = true;
+	public Vector2 clampOffsetX = new Vector2(-8, 8);
+	public Vector2 clampOffsetY = new Vector2(-5, 5);
+	public float offsetZ = 0;
 	public float moveSpeed = 0.1f;
+	
+	private Vector3 mousePosition;
 
 	void Update(){
-		//if(Input.GetMouseButtonDown(1)) {
-		if(true) {
+		if(moveable) {
 			mousePosition = Input.mousePosition;
 			mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-			mousePosition.z = 0;
+			mousePosition.z = offsetZ;
 
-			mousePosition.x = Mathf.Clamp(mousePosition.x , -8, 8);
-			mousePosition.y = Mathf.Clamp(mousePosition.y, -5, 5);
+			mousePosition.x = Mathf.Clamp(mousePosition.x , clampOffsetX.x, clampOffsetX.y);
+			mousePosition.y = Mathf.Clamp(mousePosition.y, clampOffsetY.x, clampOffsetY.y);
 
 			transform.localPosition = mousePosition;
-			//transform.position = mousePosition;
-			//transform.position = Vector2.Lerp(transform.position, mousePosition, moveSpeed);
 		}
-	}
-
-	private void OnMouseDrag() {
-		Vector3 testpos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		testpos.z = transform.position.z;
-		transform.position = testpos;
 	}
 }
