@@ -597,9 +597,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cc6b098be5c8c4ea52c0b4c820bb5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetZ: -0.5
+  moveable: 1
   clampOffsetX: {x: -8, y: 8}
   clampOffsetY: {x: -5, y: 5}
+  offsetZ: -0.5
   moveSpeed: 0.1
 --- !u!1 &259385837
 GameObject:
@@ -850,6 +851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0081eb2d5de89d64f9be1d0abd7739e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldown: 0.5
 --- !u!212 &279266334
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1824,7 +1826,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 
 --- !u!222 &1477392346
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2158,7 +2160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.87058824}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
