@@ -29,20 +29,6 @@ public class StoryReader:MonoBehaviour {
 	}
 
 	public void FindData() {
-		/*
-		
-		//string path = "Assets/Resources/XML/StoryScript.xml";
-		string path = "Assets/Resources/XML/TestScript.xml";
-
-		XmlDocument doc = new XmlDocument();
-		var contents = "";
-		using(StreamReader streamReader = new StreamReader(path)) {
-			contents = streamReader.ReadToEnd();
-		}
-		doc.LoadXml(contents);
-
-		*/
-
 		TextAsset storyFile = Resources.Load<TextAsset>("XML/TestScript");
 		//TextAsset storyFile = Resources.Load<TextAsset>("XML/StoryScript");
 		XmlDocument doc = new XmlDocument();
@@ -54,7 +40,7 @@ public class StoryReader:MonoBehaviour {
 		if(nl[0] != null) {
 			if(currentLineId <= GetLineCount(nl)) {
 
-				if(currentLineId < GetLineCount(nl)){
+				if(currentLineId < GetLineCount(nl)) {
 					GetXmlLineInfo(nl);
 					currentLineId++;
 				} else if(currentLineId == GetLineCount(nl)) {
@@ -67,16 +53,12 @@ public class StoryReader:MonoBehaviour {
 
 					Manager.instance.buttonsActive = true;
 					currentLineId = 0;
-					buttonObjectId = 0;
 
 					if(HasTimedOptions(nl)) {
 						Manager.instance.timerOnDirtFix = true;
 						StopCoroutine(OptionTimer());
 						Manager.instance.timedOptionTimer = StartCoroutine(OptionTimer());
 					}
-
-
-
 				} else {
 					//currentLineId++;
 					print("nani??");
@@ -100,7 +82,7 @@ public class StoryReader:MonoBehaviour {
 	bool HasTimedOptions(XmlNodeList nl) {
 		string str = "";
 		str = nl[0].ChildNodes[0].ChildNodes[0].Value;
-		
+
 		if(str.Contains("timed") || str.Contains("Timed")) {
 			return true;
 		}
@@ -114,21 +96,24 @@ public class StoryReader:MonoBehaviour {
 		//str = StringReplace(str);
 
 		if(str != "[@]" && str != null) {
-		//	str = CheckExpressions(str);
-		//	str = CheckSoundEffects(str);
+			str = CheckBackground(str);
+			//	str = CheckExpressions(str);
+			//	str = CheckSoundEffects(str);
 			Manager.instance.dialogBox.text = str;
 		}
 	}
 
 	void GetXmlButtonInfo(XmlNodeList nl, int buttonId) {
-		string buttonText = "", afterText = "", preReq = "", unlock = "", points = "", nextChapter = "";
+		string buttonText = "", afterText = "", preReq = "", unlock = "", points = "", nextChapter = "", bId = "";
 
-		buttonText	= nl[0].ChildNodes[2].ChildNodes[buttonId].ChildNodes[0].ChildNodes[0].ChildNodes[0].Value;
-		afterText	= nl[0].ChildNodes[2].ChildNodes[buttonId].ChildNodes[0].ChildNodes[1].ChildNodes[0].Value;
-		preReq		= nl[0].ChildNodes[2].ChildNodes[buttonId].ChildNodes[1].ChildNodes[0].Value;
-		unlock		= nl[0].ChildNodes[2].ChildNodes[buttonId].ChildNodes[2].ChildNodes[0].Value;
-		points		= nl[0].ChildNodes[2].ChildNodes[buttonId].ChildNodes[3].ChildNodes[0].Value;
+		buttonText = nl[0].ChildNodes[2].ChildNodes[buttonId].ChildNodes[0].ChildNodes[0].ChildNodes[0].Value;
+		afterText = nl[0].ChildNodes[2].ChildNodes[buttonId].ChildNodes[0].ChildNodes[1].ChildNodes[0].Value;
+		preReq = nl[0].ChildNodes[2].ChildNodes[buttonId].ChildNodes[1].ChildNodes[0].Value;
+		unlock = nl[0].ChildNodes[2].ChildNodes[buttonId].ChildNodes[2].ChildNodes[0].Value;
+		points = nl[0].ChildNodes[2].ChildNodes[buttonId].ChildNodes[3].ChildNodes[0].Value;
 		nextChapter = nl[0].ChildNodes[2].ChildNodes[buttonId].ChildNodes[4].ChildNodes[0].Value;
+		bId = nl[0].ChildNodes[2].ChildNodes[buttonId].ChildNodes[5].ChildNodes[0].Value;
+
 
 		//check if pre requirements are needed for this button
 		if((preReq.Contains("none") || preReq.Contains("None")) || Manager.instance.acquiredRequirements.Contains(preReq)) {
@@ -144,9 +129,9 @@ public class StoryReader:MonoBehaviour {
 				}
 
 				//set info & enable button
+				buttonObjectId = int.Parse(bId);
 				Manager.instance.btInfo[buttonObjectId].SetInfo(buttonText, afterText, unlock, points, nextChapter);
 				Manager.instance.btInfo[buttonObjectId].gameObject.SetActive(true);
-				buttonObjectId++;
 			} else {
 				timeoutAfterText = afterText;
 				timeoutOptionPoints = int.Parse(points);
@@ -209,4 +194,37 @@ public class StoryReader:MonoBehaviour {
 		return s;
 	}
 	*/
+
+	public string CheckBackground(string s) {
+		if(!s.Contains("[BG:")) {
+			return s;
+		}
+
+		if(s.Contains("[BG:Balcony]")) {
+			s = s.Replace("[BG:Balcony]", "");
+			Manager.instance.ChangeBackgrounds(0);
+		}
+		if(s.Contains("[BG:Bedroom]")) {
+			s = s.Replace("[BG:Bedroom]", "");
+			Manager.instance.ChangeBackgrounds(1);
+		}
+		if(s.Contains("[BG:Hall]")) {
+			s = s.Replace("[BG:Hall]", "");
+			Manager.instance.ChangeBackgrounds(2);
+		}
+		if(s.Contains("[BG:Room1]")) {
+			s = s.Replace("[BG:Room1]", "");
+			Manager.instance.ChangeBackgrounds(3);
+		}
+		if(s.Contains("[BG:Room2]")) {
+			s = s.Replace("[BG:Room2]", "");
+			Manager.instance.ChangeBackgrounds(4);
+		}
+		if(s.Contains("[BG:SecretRoom]")) {
+			s = s.Replace("[BG:SecretRoom]", "");
+			Manager.instance.ChangeBackgrounds(5);
+		}
+
+		return s;
+	}
 }

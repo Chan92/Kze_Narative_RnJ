@@ -11,6 +11,10 @@ public class Manager : MonoBehaviour{
 
 	public ButtonInfo[] btInfo;
 	public Text dialogBox;
+	public GameObject startMenu;
+	public GameObject[] endingScreens;
+	public SpriteRenderer backgroundObj;
+	public Sprite[] backgroundSprites;
 
 	public bool buttonsActive = false;
 
@@ -23,7 +27,14 @@ public class Manager : MonoBehaviour{
 	}
 
 	private void Start() {
+		startMenu.SetActive(true);
 		debugTimer.gameObject.SetActive(false);
+
+		ChangeBackgrounds(0);
+
+		for(int i = 0; i < endingScreens.Length; i++) {
+			endingScreens[i].SetActive(false);
+		}
 	}
 
 	private void Update() {
@@ -49,20 +60,37 @@ public class Manager : MonoBehaviour{
 		}
 	}
 
-
 	bool CheckGameOver() {
-		return false;
+		string chapter = StoryReader.instance.currentChapter;
+
+		if(!chapter.Contains("Ending")) {
+			return false;
+		} else {
+			int endingId;
+			chapter = chapter.Replace("Ending", "");
+			endingId = int.Parse(chapter);
+			endingScreens[endingId - 1].SetActive(true);
+			return true;
+		}
 	}
 
-
 	public void StartGame() {
-		//startMenu.SetActive(false);
+		StoryReader.instance.currentChapter = "Chapter1";
+
+		startMenu.SetActive(false);
+		NextText(true);
 	}
 
 	public void RestartButton() {
 		SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
 		Resources.UnloadUnusedAssets();
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+	}
+
+	public void ChangeBackgrounds(int enableId) {
+		if(enableId < backgroundSprites.Length) {
+			backgroundObj.sprite = backgroundSprites[enableId];
+		} 
 	}
 
 	//test
