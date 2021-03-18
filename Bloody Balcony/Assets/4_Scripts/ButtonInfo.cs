@@ -18,6 +18,14 @@ public class ButtonInfo : MonoBehaviour{
 	}
 
 	public void SetInfo(string btText, string afterDialog, string unlock, string points, string chapterName) {
+		if(btText == "[@]") {
+			btText = "";
+		}
+
+		if(afterDialog == "[@]") {
+			afterDialog = "";
+		}
+
 		buttonTextField.text = btText;
 		afterText			 = afterDialog;
 		unlockRequirements	 = unlock;

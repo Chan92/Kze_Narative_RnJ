@@ -29,8 +29,8 @@ public class StoryReader:MonoBehaviour {
 	}
 
 	public void FindData() {
-		TextAsset storyFile = Resources.Load<TextAsset>("XML/TestScript");
-		//TextAsset storyFile = Resources.Load<TextAsset>("XML/StoryScript");
+		//TextAsset storyFile = Resources.Load<TextAsset>("XML/TestScript");
+		TextAsset storyFile = Resources.Load<TextAsset>("XML/StoryScript");
 		XmlDocument doc = new XmlDocument();
 		doc.LoadXml(storyFile.text);
 
@@ -44,10 +44,8 @@ public class StoryReader:MonoBehaviour {
 					GetXmlLineInfo(nl);
 					currentLineId++;
 				} else if(currentLineId == GetLineCount(nl)) {
-					print("line id = line count");
 
 					for(int i = 0; i < GetButtonCount(nl); i++) {
-						print("for loop broken?");
 						GetXmlButtonInfo(nl, i);
 					}
 
@@ -95,10 +93,14 @@ public class StoryReader:MonoBehaviour {
 		str = nl[0].ChildNodes[1].ChildNodes[currentLineId].ChildNodes[0].Value;
 		//str = StringReplace(str);
 
-		if(str != "[@]" && str != null) {
+		if(!str.Contains("[@]") && str != null) {
 			str = CheckBackground(str);
 			//	str = CheckExpressions(str);
 			//	str = CheckSoundEffects(str);
+			Manager.instance.dialogBox.text = str;
+		} else if(str.Contains("[@]")) {
+			str = CheckBackground(str);
+			str = "";
 			Manager.instance.dialogBox.text = str;
 		}
 	}
