@@ -106,8 +106,104 @@
 				<NextChapter>Chapter4-Room2</NextChapter>
 				<ButtonId>9</ButtonId>
 			</Option2>
+			<Option3>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>This door seems locked.. Lets check another room.</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter3b</NextChapter>
+				<ButtonId>12</ButtonId>
+			</Option3>
+			<Option4>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>This door seems locked.. Lets check another room.</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter3b</NextChapter>
+				<ButtonId>13</ButtonId>
+			</Option4>
+			<Option5>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>This door seems locked.. Lets check another room.</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter3b</NextChapter>
+				<ButtonId>14</ButtonId>
+			</Option5>
 		</Options>
 	</Chapter3>
+	<Chapter3b>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[BG:Hall]This door seems locked.. Lets check another room.</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter4-Room1-part2</NextChapter>
+				<ButtonId>8</ButtonId>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter4-Room2</NextChapter>
+				<ButtonId>9</ButtonId>
+			</Option2>
+			<Option3>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter3b</NextChapter>
+				<ButtonId>12</ButtonId>
+			</Option3>
+			<Option4>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter3b</NextChapter>
+				<ButtonId>13</ButtonId>
+			</Option4>
+			<Option5>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter3b</NextChapter>
+				<ButtonId>14</ButtonId>
+			</Option5>
+		</Options>
+	</Chapter3b>
 	<Chapter4-Room1-part1>
 		<ChapterInfo> Normal </ChapterInfo>
 		<Lines>
