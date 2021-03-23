@@ -38,13 +38,11 @@ public class StoryReader:MonoBehaviour {
 		XmlNodeList nl = doc.GetElementsByTagName(chapter);
 
 		if(nl[0] != null) {
-			if(currentLineId <= GetLineCount(nl)) {
+			if(currentLineId < GetLineCount(nl)) {
+				GetXmlLineInfo(nl);
+				currentLineId++;
 
-				if(currentLineId < GetLineCount(nl)) {
-					GetXmlLineInfo(nl);
-					currentLineId++;
-				} else if(currentLineId == GetLineCount(nl)) {
-
+				if(currentLineId == GetLineCount(nl)) {
 					for(int i = 0; i < GetButtonCount(nl); i++) {
 						GetXmlButtonInfo(nl, i);
 					}
@@ -57,9 +55,6 @@ public class StoryReader:MonoBehaviour {
 						StopCoroutine(OptionTimer());
 						Manager.instance.timedOptionTimer = StartCoroutine(OptionTimer());
 					}
-				} else {
-					//currentLineId++;
-					print("nani??");
 				}
 			} else {
 				Debug.Log("Error?");
