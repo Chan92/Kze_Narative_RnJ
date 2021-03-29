@@ -15,6 +15,7 @@ public class Manager : MonoBehaviour{
 	public GameObject[] endingScreens;
 	public SpriteRenderer backgroundObj;
 	public Sprite[] backgroundSprites;
+	public GameObject julietNametag;
 
 	public bool buttonsActive = false;
 
@@ -29,6 +30,7 @@ public class Manager : MonoBehaviour{
 	private void Start() {
 		startMenu.SetActive(true);
 		debugTimer.gameObject.SetActive(false);
+		julietNametag.SetActive(false);
 
 		ChangeBackgrounds(0);
 

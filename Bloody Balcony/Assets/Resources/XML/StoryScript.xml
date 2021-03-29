@@ -6,23 +6,23 @@
 		<Lines>
 			<Line>[BG:Balcony]‘Twas a gloomy evening, for the clouds dispersed as far as the moonlight glittered. </Line>
 			<Line>And there she was, Juliet, as an owl calling it’s prey in the dusk.</Line>
-			<Line>Romeo oh Romeo, where art thou Romeo?</Line>
-			<Line>Deny thy father and refuse thy name; Or, if thou wilt not, be but sworn my love, And I’ll no longer be a Capulet.</Line>
+			<Line>[J]Romeo oh Romeo, where art thou Romeo?</Line>
+			<Line>[J]Deny thy father and refuse thy name; Or, if thou wilt not, be but sworn my love, And I’ll no longer be a Capulet.</Line>
 			<Line>[@]</Line>
 			<Line>...</Line>
-			<Line>Romeo?</Line>
-			<Line>Romeo, it be thy line...</Line>
-			<Line>Did Romeo bail again? Typical.</Line>
+			<Line>[J]Romeo?</Line>
+			<Line>[J]Romeo, it be thy line...</Line>
+			<Line>[J]Did Romeo bail again? Typical.</Line>
 			<Line>Just then, a splatter spilled on dear Juliet’s palm.</Line>
-			<Line>What in the-?	What is this?</Line>
-			<Line>And what is that foul smell?</Line>
-			<Line>Romeo, thou hath better not left me here and started drinking.</Line>
+			<Line>[J]What in the-?	What is this?</Line>
+			<Line>[J]And what is that foul smell?</Line>
+			<Line>[J]Romeo, thou hath better not left me here and started drinking.</Line>
 		</Lines>
 		<Options>
 			<Option1>
 				<Text>
 					<OptionText>Climb up</OptionText>
-					<AfterText> I'm Climbing up. </AfterText>
+					<AfterText> Juliet Climbs up. </AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
@@ -48,14 +48,14 @@
 	<Chapter2>
 		<ChapterInfo> Normal </ChapterInfo>
 		<Lines>
-			<Line>He’s not here… Suspicious… CHEATER! I MUST INVESTIGATE HIS ROOM</Line>
-			<Line>[BG:Bedroom]Nani? Why is there blood on the floor? I must investigate more!</Line>
+			<Line>[J]He’s not here… Suspicious… CHEATER! I MUST INVESTIGATE HIS ROOM</Line>
+			<Line>[BG:Bedroom][J]Nani? Why is there blood on the floor? I must investigate more!</Line>
 		</Lines>
 		<Options>
 			<Option1>
 				<Text>
 					<OptionText>[@]</OptionText>
-					<AfterText> An attack happened here! That’s why there’s blood! </AfterText>
+					<AfterText>[J]An attack happened here! That’s why there’s blood! </AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
@@ -66,7 +66,7 @@
 			<Option2>
 				<Text>
 					<OptionText>[@]</OptionText>
-					<AfterText>An accident happened here! That’s why there’s blood!</AfterText>
+					<AfterText>[J]An accident happened here! That’s why there’s blood!</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
@@ -79,8 +79,8 @@
 	<Chapter3>
 		<ChapterInfo> Normal </ChapterInfo>
 		<Lines>
-			<Line>AH! IM BEING ATTACKED!</Line>
-			<Line>Who was that? Where is Romeo? Need exploring!</Line>
+			<Line>[J]AH! IM BEING ATTACKED!</Line>
+			<Line>[J]Who was that? Where is Romeo? Need exploring!</Line>
 			<Line>[BG:Hall]...</Line>
 		</Lines>
 		<Options>
@@ -109,42 +109,42 @@
 			<Option3>
 				<Text>
 					<OptionText>[@]</OptionText>
-					<AfterText>This door seems locked.. Lets check another room.</AfterText>
+					<AfterText>[@]</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter3b</NextChapter>
+				<NextChapter>Chapter3b-1</NextChapter>
 				<ButtonId>12</ButtonId>
 			</Option3>
 			<Option4>
 				<Text>
 					<OptionText>[@]</OptionText>
-					<AfterText>This door seems locked.. Lets check another room.</AfterText>
+					<AfterText>[@]</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter3b</NextChapter>
+				<NextChapter>Chapter3b-2</NextChapter>
 				<ButtonId>13</ButtonId>
 			</Option4>
 			<Option5>
 				<Text>
 					<OptionText>[@]</OptionText>
-					<AfterText>This door seems locked.. Lets check another room.</AfterText>
+					<AfterText>[@]</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter3b</NextChapter>
+				<NextChapter>Chapter3b-3</NextChapter>
 				<ButtonId>14</ButtonId>
 			</Option5>
 		</Options>
 	</Chapter3>
-	<Chapter3b>
+	<Chapter3b-1>
 		<ChapterInfo> Normal </ChapterInfo>
 		<Lines>
-			<Line>[BG:Hall]This door seems locked.. Lets check another room.</Line>
+			<Line>[BG:Hall][J]I need a key for this door... I mean, I could just break in? But lets try another room first.</Line>
 		</Lines>
 		<Options>
 			<Option1>
@@ -177,7 +177,7 @@
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter3b</NextChapter>
+				<NextChapter>Chapter3b-1</NextChapter>
 				<ButtonId>12</ButtonId>
 			</Option3>
 			<Option4>
@@ -188,7 +188,7 @@
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter3b</NextChapter>
+				<NextChapter>Chapter3b-2</NextChapter>
 				<ButtonId>13</ButtonId>
 			</Option4>
 			<Option5>
@@ -199,15 +199,141 @@
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter3b</NextChapter>
+				<NextChapter>Chapter3b-3</NextChapter>
 				<ButtonId>14</ButtonId>
 			</Option5>
 		</Options>
-	</Chapter3b>
+	</Chapter3b-1>
+	<Chapter3b-2>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[BG:Hall][J]This door seems locked.. Lets check another door.</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter4-Room1-part2</NextChapter>
+				<ButtonId>8</ButtonId>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter4-Room2</NextChapter>
+				<ButtonId>9</ButtonId>
+			</Option2>
+			<Option3>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter3b-1</NextChapter>
+				<ButtonId>12</ButtonId>
+			</Option3>
+			<Option4>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter3b-2</NextChapter>
+				<ButtonId>13</ButtonId>
+			</Option4>
+			<Option5>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter3b-3</NextChapter>
+				<ButtonId>14</ButtonId>
+			</Option5>
+		</Options>
+	</Chapter3b-2>
+	<Chapter3b-3>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[BG:Hall][J]Damn! Why is the door to the kitchen locked.. I wanted to steal a snack before exploring further.</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter4-Room1-part2</NextChapter>
+				<ButtonId>8</ButtonId>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter4-Room2</NextChapter>
+				<ButtonId>9</ButtonId>
+			</Option2>
+			<Option3>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter3b-1</NextChapter>
+				<ButtonId>12</ButtonId>
+			</Option3>
+			<Option4>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter3b-2</NextChapter>
+				<ButtonId>13</ButtonId>
+			</Option4>
+			<Option5>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter3b-3</NextChapter>
+				<ButtonId>14</ButtonId>
+			</Option5>
+		</Options>
+	</Chapter3b-3>
 	<Chapter4-Room1-part1>
 		<ChapterInfo> Normal </ChapterInfo>
 		<Lines>
-			<Line>[BG:Room1]Lets look around.</Line>
+			<Line>[BG:Room1][J]Lets look around.</Line>
 		</Lines>
 		<Options>
 			<Option1>
@@ -226,68 +352,68 @@
 	<Chapter4-Room1-part2>
 		<ChapterInfo> Normal </ChapterInfo>
 		<Lines>
-			<Line>[BG:Room1]There is a suspicious door in the back!</Line>
+			<Line>[BG:Room1][J]There is a suspicious door in the back! Also.. what is that over there?</Line>
 		</Lines>
 		<Options>
 			<Option1>
 				<Text>
 					<OptionText>Go through the door</OptionText>
-					<AfterText>There’s a note! So Romeo is trying to frame Tybalt for killing everyone? What do I hear in the hallway!?</AfterText>
+					<AfterText>[J]There’s a note! So Romeo is trying to frame Tybalt for killing everyone? What do I hear in the hallway!?</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> door </unlockrequirement>
 				<Points>0</Points>
 				<NextChapter>Chapter5</NextChapter>
-				<ButtonId>1</ButtonId>
+				<ButtonId>10</ButtonId>
 			</Option1>
 			<Option2>
 				<Text>
 					<OptionText>I dont trust that door</OptionText>
-					<AfterText>There’s a note! So Tybalt killed everyone? What do I hear in the hallway!? </AfterText>
+					<AfterText>[J]There’s a note! So Tybalt killed everyone? What do I hear in the hallway!? </AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
 				<NextChapter>Chapter5</NextChapter>
-				<ButtonId>0</ButtonId>
+				<ButtonId>11</ButtonId>
 			</Option2>
 		</Options>
 	</Chapter4-Room1-part2>
 	<Chapter4-Room2>
 		<ChapterInfo> Normal </ChapterInfo>
 		<Lines>
-			<Line>[BG:Room2]There is a suspicious door in the back!</Line>
+			<Line>[BG:Room2][J]There is a strage note over there! Also.. where does that suspicious door lead to?</Line>
 		</Lines>
 		<Options>
 			<Option1>
 				<Text>
 					<OptionText>Go through the door</OptionText>
-					<AfterText>There’s a note! So Romeo is trying to frame Tybalt for killing everyone? What do I hear in the hallway!?</AfterText>
+					<AfterText>[J]There’s a note! So Romeo is trying to frame Tybalt for killing everyone? What do I hear in the hallway!?</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> door </unlockrequirement>
 				<Points>0</Points>
 				<NextChapter>Chapter5</NextChapter>
-				<ButtonId>1</ButtonId>
+				<ButtonId>10</ButtonId>
 			</Option1>
 			<Option2>
 				<Text>
 					<OptionText>I dont trust that door</OptionText>
-					<AfterText>There’s a note! So Tybalt killed everyone? What do I hear in the hallway!? </AfterText>
+					<AfterText>[J]There’s a note! So Tybalt killed everyone? What do I hear in the hallway!? </AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
 				<NextChapter>Chapter5</NextChapter>
-				<ButtonId>0</ButtonId>
+				<ButtonId>11</ButtonId>
 			</Option2>
 		</Options>
 	</Chapter4-Room2>
 	<Chapter5>
 		<ChapterInfo> Normal </ChapterInfo>
 		<Lines>
-			<Line>[BG:Hall]Tybalt, You’re here! And Romeo! You’re… alive-ish?</Line>
-			<Line>Romeo, you want me to take revenge on Tybalt for killing everyone in the mansion?</Line>
+			<Line>[BG:Hall][J]Tybalt, You’re here! And Romeo! You’re… alive-ish?</Line>
+			<Line>[J]Romeo, you want me to take revenge on Tybalt for killing everyone in the mansion?</Line>
 		</Lines>
 		<Options>
 			<Option1>
@@ -304,7 +430,7 @@
 			<Option2>
 				<Text>
 					<OptionText> Dont Kill </OptionText>
-					<AfterText>I don’t wanna kill him!</AfterText>
+					<AfterText>[J]I don’t wanna kill him!</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
@@ -317,7 +443,7 @@
 	<Chapter6>
 		<ChapterInfo> Normal </ChapterInfo>
 		<Lines>
-			<Line>What? You’re angry? You want me to join you in the afterlife so we can be together forever?</Line>
+			<Line>[J]What? You’re angry? You want me to join you in the afterlife so we can be together forever?</Line>
 		</Lines>
 		<Options>
 			<Option1>
@@ -349,8 +475,8 @@
 	<Chapter7>
 		<ChapterInfo> Timed </ChapterInfo>
 		<Lines>
-			<Line>Nooo Romeo I don’t want to join you in the afterlife don’t chase meeeee!</Line>
-			<Line>Where am I gonna run? I only have 5 seconds before he catches up!</Line>
+			<Line>[J]Nooo Romeo I don’t want to join you in the afterlife don’t chase meeeee!</Line>
+			<Line>[J]Where am I gonna run? I only have 5 seconds before he catches up!</Line>
 		</Lines>
 		<Options>
 			<Option1>
@@ -362,7 +488,7 @@
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
 				<NextChapter>Chapter8-Room1</NextChapter>
-				<ButtonId>8</ButtonId>
+				<ButtonId>15</ButtonId>
 			</Option1>
 			<Option2>
 				<Text>
@@ -373,12 +499,12 @@
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
 				<NextChapter>Chapter8-Room2</NextChapter>
-				<ButtonId>9</ButtonId>
+				<ButtonId>16</ButtonId>
 			</Option2>
 			<Option3>
 				<Text>
 					<OptionText> Timeout </OptionText>
-					<AfterText>[@]</AfterText>
+					<AfterText>Unable to run away, Romeo catches you.</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
@@ -396,16 +522,27 @@
 		<Options>
 			<Option1>
 				<Text>
-					<OptionText> Hide here </OptionText>
+					<OptionText> Hide behind the stairs </OptionText>
 					<AfterText>[@]</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
 				<NextChapter>Ending3</NextChapter>
-				<ButtonId>11</ButtonId>
+				<ButtonId>0</ButtonId>
 			</Option1>
 			<Option2>
+				<Text>
+					<OptionText> Hide with a vase on your head </OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Ending3</NextChapter>
+				<ButtonId>1</ButtonId>
+			</Option2>
+			<Option3>
 				<Text>
 					<OptionText> Hide in suspicious room </OptionText>
 					<AfterText>[@]</AfterText>
@@ -414,19 +551,19 @@
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
 				<NextChapter>Ending4</NextChapter>
-				<ButtonId>10</ButtonId>
-			</Option2>
-			<Option3>
+				<ButtonId>2</ButtonId>
+			</Option3>
+			<Option4>
 				<Text>
 					<OptionText> Timeout </OptionText>
-					<AfterText>[@]</AfterText>
+					<AfterText>Unable to hide, Romeo catches you.</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
 				<NextChapter>Ending3</NextChapter>
 				<ButtonId>[@]</ButtonId>
-			</Option3>
+			</Option4>
 		</Options>
 	</Chapter8-Room1>
 	<Chapter8-Room2>
@@ -437,16 +574,27 @@
 		<Options>
 			<Option1>
 				<Text>
-					<OptionText> Hide here </OptionText>
+					<OptionText> Hide behind the stairs </OptionText>
 					<AfterText>[@]</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
 				<NextChapter>Ending3</NextChapter>
-				<ButtonId>11</ButtonId>
+				<ButtonId>0</ButtonId>
 			</Option1>
 			<Option2>
+				<Text>
+					<OptionText> Hide with a vase on your head </OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Ending3</NextChapter>
+				<ButtonId>1</ButtonId>
+			</Option2>
+			<Option3>
 				<Text>
 					<OptionText> Hide in suspicious room </OptionText>
 					<AfterText>[@]</AfterText>
@@ -455,19 +603,19 @@
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
 				<NextChapter>Ending4</NextChapter>
-				<ButtonId>10</ButtonId>
-			</Option2>
-			<Option3>
+				<ButtonId>2</ButtonId>
+			</Option3>
+			<Option4>
 				<Text>
 					<OptionText> Timeout </OptionText>
-					<AfterText>[@]</AfterText>
+					<AfterText>Unable to hide, Romeo catches you.</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
 				<NextChapter>Ending3</NextChapter>
 				<ButtonId>[@]</ButtonId>
-			</Option3>
+			</Option4>
 		</Options>
 	</Chapter8-Room2>
 

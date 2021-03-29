@@ -89,11 +89,13 @@ public class StoryReader:MonoBehaviour {
 		//str = StringReplace(str);
 
 		if(!str.Contains("[@]") && str != null) {
+			str = NameCheck(str);
 			str = CheckBackground(str);
 			//	str = CheckExpressions(str);
 			//	str = CheckSoundEffects(str);
 			Manager.instance.dialogBox.text = str;
 		} else if(str.Contains("[@]")) {
+			str = NameCheck(str);
 			str = CheckBackground(str);
 			str = "";
 			Manager.instance.dialogBox.text = str;
@@ -141,7 +143,13 @@ public class StoryReader:MonoBehaviour {
 		Manager.instance.debugTimer.gameObject.SetActive(false);
 		StoryReader.instance.currentChapter = timeoutNextChapter;
 
+		if(timeoutAfterText == "[@]") {
+			timeoutAfterText = "";
+		}
+
 		if(timeoutAfterText != "" && timeoutAfterText != null) {
+			timeoutAfterText = NameCheck(timeoutAfterText);
+
 			Manager.instance.dialogBox.text = timeoutAfterText;
 			Manager.instance.SetButtons();
 		} else {
@@ -156,7 +164,7 @@ public class StoryReader:MonoBehaviour {
 		while(timecounter > 0 && Manager.instance.timerOnDirtFix == true) {
 			timecounter -= Time.deltaTime;
 
-			Manager.instance.debugTimer.text = "Timer: " + timecounter.ToString();
+			Manager.instance.debugTimer.text = "" + timecounter.ToString();
 			yield return null;
 
 			if(timecounter <= 0) {
@@ -165,13 +173,17 @@ public class StoryReader:MonoBehaviour {
 		}
 	}
 
-	/* <placeholder, fix later>
-	string StringReplace(string s) {
+	
+	public string NameCheck(string s) {
 		s = s.Replace('$', '\n');
-		s = s.Replace("[Juliet]", Manager.instance.mainCharName);
-		s = s.Replace("[Romeo]", Manager.instance.dateName);
-		s = s.Replace("[Tybalt]", Manager.instance.dateName);
-		s = s.Replace("[Narator]", Manager.instance.dateName);
+
+		if(s.Contains("[J]")) {
+			s = s.Replace("[J]", "");
+			Manager.instance.julietNametag.SetActive(true);
+		} else {
+			Manager.instance.julietNametag.SetActive(false);
+		}
+
 
 		return s;
 	}
@@ -190,7 +202,7 @@ public class StoryReader:MonoBehaviour {
 
 		return s;
 	}
-	*/
+	
 
 	public string CheckBackground(string s) {
 		if(!s.Contains("[BG:")) {

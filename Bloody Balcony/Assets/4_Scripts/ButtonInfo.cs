@@ -18,12 +18,12 @@ public class ButtonInfo : MonoBehaviour{
 	}
 
 	public void SetInfo(string btText, string afterDialog, string unlock, string points, string chapterName) {
-		if(btText == "[@]") {
-			btText = "";
+		if(btText.Contains("[@]")) {
+			btText = btText.Replace("[@]", "");
 		}
 
-		if(afterDialog == "[@]") {
-			afterDialog = "";
+		if(afterDialog.Contains("[@]")) {
+			afterDialog = afterDialog.Replace("[@]", "");
 		}
 
 		buttonTextField.text = btText;
@@ -44,7 +44,9 @@ public class ButtonInfo : MonoBehaviour{
 		StoryReader.instance.currentChapter = nextChapter;
 		CheckUnlocks();
 
+
 		if(afterText != "" && afterText != null) {
+			afterText = StoryReader.instance.NameCheck(afterText);
 			Manager.instance.dialogBox.text = afterText;
 			Manager.instance.SetButtons();
 		} else {			
@@ -56,7 +58,6 @@ public class ButtonInfo : MonoBehaviour{
 		//add new unlocked requierements
 		if(!unlockRequirements.Contains("none") && !unlockRequirements.Contains("None")) {
 			Manager.instance.acquiredRequirements.Add(unlockRequirements);
-			print("broken at: 3");
 		}
 	}
 }
