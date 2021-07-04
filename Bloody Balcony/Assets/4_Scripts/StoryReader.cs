@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Xml;
 using System.IO;
 
@@ -21,6 +22,8 @@ public class StoryReader:MonoBehaviour {
 	private string timeoutAfterText;
 	private int timeoutOptionPoints;
 	private string timeoutNextChapter;
+
+	private float timeMultiplier = 1f;
 
 	private void Awake() {
 		instance = this;
@@ -77,6 +80,13 @@ public class StoryReader:MonoBehaviour {
 		str = nl[0].ChildNodes[0].ChildNodes[0].Value;
 
 		if(str.Contains("timed") || str.Contains("Timed")) {
+			if(str.Contains("timed2")) {
+				timeMultiplier = 2;
+			} else {
+				timeMultiplier = 1;
+			}
+
+
 			return true;
 		}
 
@@ -189,7 +199,7 @@ public class StoryReader:MonoBehaviour {
 
 	private IEnumerator OptionTimer() {
 		Manager.instance.debugTimer.gameObject.SetActive(true);
-		float timecounter = 5.5f;
+		float timecounter = 5.5f * timeMultiplier;
 
 		while(timecounter > 0 && Manager.instance.timerOnDirtFix == true) {
 			timecounter -= Time.deltaTime;
@@ -209,12 +219,31 @@ public class StoryReader:MonoBehaviour {
 
 		if(s.Contains("[J]")) {
 			s = s.Replace("[J]", "");
+			Manager.instance.julietNametag.transform.GetComponentInChildren<Text>().text = "Juliet";
 			Manager.instance.julietNametag.SetActive(true);
 		} else if(s.Contains("[Juliet]")) {
 			s = s.Replace("[Juliet]", "");
+			Manager.instance.julietNametag.transform.GetComponentInChildren<Text>().text = "Juliet";
 			Manager.instance.julietNametag.SetActive(true);
+
+		} else if(s.Contains("[???]")) {
+			s = s.Replace("[???]", "");
+			Manager.instance.julietNametag.transform.GetComponentInChildren<Text>().text = "???";
+			Manager.instance.julietNametag.SetActive(true);
+		} else if(s.Contains("[Romeo]")) {
+			s = s.Replace("[Romeo]", "");
+			Manager.instance.julietNametag.transform.GetComponentInChildren<Text>().text = "Romeo";
+			Manager.instance.julietNametag.SetActive(true);
+		} else if(s.Contains("[Tybalt]")) {
+			s = s.Replace("[Tybalt]", "");
+			Manager.instance.julietNametag.transform.GetComponentInChildren<Text>().text = "Tybalt";
+			Manager.instance.julietNametag.SetActive(true);
+
 		} else if(s.Contains("[Narrator]")) {
 			s = s.Replace("[Narrator]", "");
+			Manager.instance.julietNametag.SetActive(false);
+		} else if(s.Contains("[Narrative]")) {
+			s = s.Replace("[Narrative]", "");
 			Manager.instance.julietNametag.SetActive(false);
 		} else {
 			Manager.instance.julietNametag.SetActive(false);
