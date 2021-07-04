@@ -1,87 +1,197 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Story>
-	<!--[Start]-->
+	<!--[Balcony]-->
 	<Chapter1>
 		<ChapterInfo> Normal </ChapterInfo>
 		<Lines>
-			<Line>[BG:Balcony]‘Twas a gloomy evening, for the clouds dispersed as far as the moonlight glittered. </Line>
-			<Line>And there she was, Juliet, as an owl calling it’s prey in the dusk.</Line>
-			<Line>[J]Romeo oh Romeo, where art thou Romeo?</Line>
-			<Line>[J]Deny thy father and refuse thy name; Or, if thou wilt not, be but sworn my love, And I’ll no longer be a Capulet.</Line>
-			<Line>[@]</Line>
-			<Line>...</Line>
-			<Line>[J]Romeo?</Line>
-			<Line>[J]Romeo, it be thy line...</Line>
-			<Line>[J]Did Romeo bail again? Typical.</Line>
-			<Line>Just then, a splatter spilled on dear Juliet’s palm.</Line>
-			<Line>[J]What in the-?	What is this?</Line>
-			<Line>[J]And what is that foul smell?</Line>
-			<Line>[J]Romeo, thou hath better not left me here and started drinking.</Line>
+			<Line>[BG:Balcony][Narrator] In the distant past, a lonesome girl watched the clouds disperse and the moonlight glitter.</Line>
+			<Line>[Narrator] She walked through the low cut grass, wistful yet worried.</Line>
+			<Line>[Narrator] While her vision laid low, she spoke.</Line>
+			<Line>[Juliet] Romeo, oh, Romeo, wherefore art thou Romeo?</Line>
+			<Line>[Juliet] Deny thy father and refuse thy name; Or, if thou wilt not, be but sworn my love, and I'll no longer be a capulet.</Line>
+			<Line>[Narrator] She stared at the ground in silence, waiting for a response. Then, spoke once more.</Line>
+			<Line>[Juliet] Romeo?</Line>
+			<Line>[Narrator] Her calls went unanswered.</Line>
+			<Line>[Juliet] Romeo, it's your line. You can't keep doing this for every scene. It's not a solo play.</Line>
+			<Line>[Juliet] For once I wish you'd grow up and start taking responsibility.</Line>
+			<Line>[Narrator] Her words echo through the garden, yet remain unheard.</Line>
+			<Line>[Narrator] Just then, a droplet found itself on her palm.</Line>
+			<Line>[Juliet] Eek! What’s that?</Line>
+			<Line>[Juliet] *Sniff*</Line>
+			<Line>[Juliet] It smells weird, almost like iron.</Line>
+			<Line>[Juliet] Wait..</Line>
+			<Line>[Juliet] Th-.. This can't be what I think it is...</Line>
+			<Line>[Juliet] Romeo, when I climb up there and you play one of your stupid jokes again, I swear I'll be done with this.</Line>
+			<Line>[Juliet] Should I even concern myself with this?</Line>
 		</Lines>
 		<Options>
 			<Option1>
 				<Text>
 					<OptionText>Climb up</OptionText>
-					<AfterText> Juliet Climbs up. </AfterText>
+					<AfterText>[@]</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter2</NextChapter>
+				<NextChapter>Chapter1c</NextChapter>
 				<ButtonId>4</ButtonId>
 			</Option1>
 			<Option2>
 				<Text>
-					<OptionText>Leave him</OptionText>
+					<OptionText>Leave</OptionText>
 					<AfterText>[@]</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>5</Points>
-				<NextChapter>Ending1</NextChapter>
+				<NextChapter>Chapter1b</NextChapter>
 				<ButtonId>5</ButtonId>
 			</Option2>
 		</Options>
 	</Chapter1>
-	
-	<!--[Normal mode-->
-	<Chapter2>
+	<Chapter1b>
 		<ChapterInfo> Normal </ChapterInfo>
 		<Lines>
-			<Line>[J]He’s not here… Suspicious… CHEATER! I MUST INVESTIGATE HIS ROOM</Line>
-			<Line>[BG:Bedroom][J]Nani? Why is there blood on the floor? I must investigate more!</Line>
+			<Line>[Juliet] That’s right. I don’t have to deal with this anymore.</Line>
+			<Line>[Narrator] The maiden leaves the same way she came, yet now free of mind, having finally made her choice.</Line>
 		</Lines>
 		<Options>
 			<Option1>
 				<Text>
 					<OptionText>[@]</OptionText>
-					<AfterText>[J]An attack happened here! That’s why there’s blood! </AfterText>
+					<AfterText>[@]</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter3</NextChapter>
+				<NextChapter>Ending1</NextChapter>
+				<ButtonId>0</ButtonId>
+			</Option1>
+		</Options>
+	</Chapter1b>
+	<Chapter1c>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Narrator] Juliet made up her mind and heart, unknowing of what lies above.</Line>
+			<Line>[Narrator] Or that her love has already gone away.</Line>
+			<Line>[Juliet] Ngh..</Line>
+			<Line>[Juliet] Ugh...</Line>
+			<Line>[Juliet] This dress is not made for climbing..</Line>
+			<Line>[Juliet] I swear this balcony gets more vine-y each time I see it. Is there even a use for plants on a wall?</Line>
+			<Line>[Narrator] She stepped over the ridge, feeling the cold breeze brush by.</Line>
+			<Line>[Narrator] The door stood widely opened, with the curtains flowing with the wind towards the darkened room.</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter2</NextChapter>
+				<ButtonId>fbt</ButtonId>
+			</Option1>
+		</Options>
+	</Chapter1c>
+		
+	<!--[bedroom]-->
+	<Chapter2>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Juliet][BG:Bedroom] He never leaves this open... At least, not when he's gone.</Line>
+			<Line>[Juliet] He’s way too scared someone’d steal his precious wine collection.</Line>
+			<Line>[Narrator] She takes her first step inside, immediately followed by a quick tap backwards.</Line>
+			<Line>[Juliet] Eek! Why is it so sticky?</Line>
+			<Line>[Narrator] A quick thought crossed her mind.</Line>
+			<Line>[Juliet] Please tell me I won't find any magazines laying around.</Line>
+			<Line>[Narrator] She steps inside again, this time avoiding the puddle.</Line>
+			<Line>[Juliet] I can't see a single thing... Where did I leave my candle again?</Line>
+			<Line>[Juliet][FindCandle] Ah! Here we go.</Line>
+			<Line>[Juliet][LitCandle] There, now I can finally see-</Line>
+			<Line>[Narrator] Her eyes fall to the floor.</Line>
+			<Line>[Juliet] What…</Line>
+			<Line>[Narrator] The birds scatter as a piercing shriek cries through the silence.</Line>
+			<Line>[Juliet] AAAAHHHHHH!!</Line>
+			<Line>[Juliet] Is this... Blood?</Line>
+			<Line>[Juliet] What happened here? And where is Romeo?</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText>Shout for Romeo</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter2a</NextChapter>
+				<ButtonId>0</ButtonId>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText>Remain quiet</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter2b</NextChapter>
+				<ButtonId>1</ButtonId>
+			</Option2>
+		</Options>
+	</Chapter2>
+
+	<Chapter2a>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Juliet] If love be rough with you, be rough with love...</Line>
+			<Line>[Juliet] O ROMEO, ROMEO! WHERE ART THOU?</Line>
+			<Line>[Narrator] Her voice echoes through the halls, but silence is returned.</Line>
+			<Line>[Juliet] If no one answers, I should look into what happened here myself.</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter2Sword</NextChapter>
 				<ButtonId>6</ButtonId>
 			</Option1>
 			<Option2>
 				<Text>
 					<OptionText>[@]</OptionText>
-					<AfterText>[J]An accident happened here! That’s why there’s blood!</AfterText>
+					<AfterText>[@]</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter3</NextChapter>
+				<NextChapter>Chapter2Wine</NextChapter>
 				<ButtonId>7</ButtonId>
 			</Option2>
+			<Option3>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter2Blood</NextChapter>
+				<ButtonId>20</ButtonId>
+			</Option3>
 		</Options>
-	</Chapter2>
-	<Chapter3>
+	</Chapter2a>
+	<Chapter2b>
 		<ChapterInfo> Normal </ChapterInfo>
 		<Lines>
-			<Line>[J]AH! IM BEING ATTACKED!</Line>
-			<Line>[J]Who was that? Where is Romeo? Need exploring!</Line>
-			<Line>[BG:Hall]...</Line>
+			<Line>[Juliet] If something happened, I’d probably want to keep quiet, just in case the perpetrator is still here...</Line>
+			<Line>[Juliet] I should look into what happened here.</Line>
 		</Lines>
 		<Options>
 			<Option1>
@@ -92,8 +202,8 @@
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter4-Room1-part2</NextChapter>
-				<ButtonId>8</ButtonId>
+				<NextChapter>Chapter2Sword</NextChapter>
+				<ButtonId>6</ButtonId>
 			</Option1>
 			<Option2>
 				<Text>
@@ -103,7 +213,247 @@
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter4-Room2</NextChapter>
+				<NextChapter>Chapter2Wine</NextChapter>
+				<ButtonId>7</ButtonId>
+			</Option2>
+			<Option3>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter2Bed</NextChapter>
+				<ButtonId>19</ButtonId>
+			</Option3>
+			<Option4>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter2Blood</NextChapter>
+				<ButtonId>20</ButtonId>
+			</Option4>
+		</Options>
+	</Chapter2b>
+	<Chapter2c>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Juliet]Lets see if I can find anything else...</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter2Sword</NextChapter>
+				<ButtonId>6</ButtonId>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter2Wine</NextChapter>
+				<ButtonId>7</ButtonId>
+			</Option2>
+			<Option3>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter2Bed</NextChapter>
+				<ButtonId>19</ButtonId>
+			</Option3>
+			<Option4>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter2Blood</NextChapter>
+				<ButtonId>20</ButtonId>
+			</Option4>
+		</Options>
+	</Chapter2c>
+
+	<Chapter2Blood>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Juliet] Is that…? Wine? Romeo's favorite too…</Line>
+			<Line>[Juliet] Did that drunkard forget about me because of this?!</Line>
+			<Line>[Juliet] Romeo, you better show up soon or not at all!</Line>
+			<Line>[Juliet] How dare you forget about me after-... Wait...</Line>
+			<Line>[Juliet] Why does this wine smell… Metallic?</Line>
+			<Line>[Juliet] Is there blood mixed in with the wine?</Line>
+			<Line>[Juliet] Did Romeo hurt himself in an accident after getting drunk?</Line>
+			<Line>[Juliet] There seem to be footsteps covered in the liquid heading out the door...</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>NEXT-Bedroom</NextChapter>
+				<ButtonId>fbt</ButtonId>
+			</Option1>
+		</Options>
+	</Chapter2Blood>
+	<Chapter2Bed>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Juliet]...</Line>
+			<Line>[Juliet] Romeo's bed...</Line>
+			<Line>[Juliet] No Juliet, focus! These times of woe afford no time to woo.</Line>
+			<Line>[Narrator] Juliet looks around the room, but her eyes land on his bed once again.</Line>
+			<Line>[Juliet] ... Or... maybe just a little..</Line>
+			<Line>[Narrator] Juliet jumps on Romeo's bed and rolls around.</Line>
+			<Line>[Narrator] Suddenly, her eyes spot something on the ground. She descends from the bed for inspection.</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>NEXT-Bedroom</NextChapter>
+				<ButtonId>fbt</ButtonId>
+			</Option1>
+		</Options>
+	</Chapter2Bed>
+	<Chapter2Wine>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Juliet] It’s a broken wine bottle..</Line>
+			<Line>[Juliet] This must be where the puddle came from. But how did it break? And how did it roll under the bed?</Line>
+			<Line>[Juliet] Also, it smells...</Line>
+			<Line>[Juliet] Strange. Almost like blood...</Line>
+			<Line>[Juliet] Did he get drunk and hurt himself?</Line>
+			<Line>[Juliet] I hope he’s okay...</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>NEXT-Bedroom</NextChapter>
+				<ButtonId>fbt</ButtonId>
+			</Option1>
+		</Options>
+	</Chapter2Wine>
+	<Chapter2Sword>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Juliet] A sword? What’s that doing here?</Line>
+			<Line>[Narrator] The candle shines bright, revealing a red glow on the blade.</Line>
+			<Line>[Juliet] There’s blood on the sword... But whose blood is it?</Line>
+			<Line>[Juliet] More importantly, this sword is only used for traditional duels. He must've pissed someone off again.</Line>
+			<Line>[Juliet] That would at least explain why the room is so messed up.</Line>
+			<Line>[Juliet] But wait.. This sword isn’t from his family.. It’s from Tybalt?</Line>
+			<Line>[Juliet] Romeo o Romeo...</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>NEXT-Bedroom</NextChapter>
+				<ButtonId>fbt</ButtonId>
+			</Option1>
+		</Options>
+	</Chapter2Sword>
+
+	<Chapter2Continue>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Juliet] I can’t believe this is happening… And why is it so quiet? Where is everyone?</Line>
+			<Line>[Narrator] An echoing howl can be heard behind her.</Line>
+			<Line>[Juliet] What was that!?</Line>
+			<Line>[Narrator] She looks around her, formulating an idea of what the eery sound was.</Line>
+			<Line>[Narrator] Suddenly, she feels a painful jab near her chest.</Line>
+			<Line>[Juliet] Agh! Ouch.. What was... that-?</Line>
+			<Line>[Narrator] She gazes around the room, but her vision fails her. She sees flashes of white before her, as the pain strengthens and her vision turns to black.</Line>
+			<Line>[Narrator] Moments later, she opens her eyes, finding herself on the floor.</Line>
+			<Line>[Juliet] Who was that? What was that? Where are you!?</Line>
+			<Line>[Juliet] ...</Line>
+			<Line>[Juliet] Romeo?</Line>
+			<Line>[Juliet] ...</Line>
+			<Line>[Juliet] Something is wrong in this house. I need answers. Would there be people in other rooms?</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[@]</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter3</NextChapter>
+				<ButtonId>fbt</ButtonId>
+			</Option1>
+		</Options>
+	</Chapter2Continue>
+
+	<!--[Hall]-->
+	<Chapter3>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[BG:Hall][Narrator] Juliet stumbles to the main hall, frantically searching for the people she believed were there.</Line>
+			<Line>[Juliet] Now where to go...</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[Juliet] If I can find Romeo anywhere, he’d be drinking in his winery.</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter4.1</NextChapter>
+				<ButtonId>8</ButtonId>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText>[@]</OptionText>
+					<AfterText>[Juliet] Maybe I can find some information in the library...</AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter4.3</NextChapter>
 				<ButtonId>9</ButtonId>
 			</Option2>
 			<Option3>
@@ -131,12 +481,12 @@
 			<Option5>
 				<Text>
 					<OptionText>[@]</OptionText>
-					<AfterText>[@]</AfterText>
+					<AfterText>[Juliet] If anyone is around, it should be in the ballroom, right?</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter3b-3</NextChapter>
+				<NextChapter>Chapter4.2</NextChapter>
 				<ButtonId>14</ButtonId>
 			</Option5>
 		</Options>
@@ -144,13 +494,13 @@
 	<Chapter3b-1>
 		<ChapterInfo> Normal </ChapterInfo>
 		<Lines>
-			<Line>[BG:Hall][J]I need a key for this door... I mean, I could just break in? But lets try another room first.</Line>
+			<Line>[BG:Hall][Juliet]I need a key for this door... I mean, I could just break in? But lets try another room first.</Line>
 		</Lines>
 		<Options>
 			<Option1>
 				<Text>
 					<OptionText>[@]</OptionText>
-					<AfterText>[@]</AfterText>
+					<AfterText>[Juliet] If I can find Romeo anywhere, he’d be drinking in his winery.</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
@@ -161,7 +511,7 @@
 			<Option2>
 				<Text>
 					<OptionText>[@]</OptionText>
-					<AfterText>[@]</AfterText>
+					<AfterText>[Juliet] Maybe I can find some information in the library...</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
@@ -194,12 +544,12 @@
 			<Option5>
 				<Text>
 					<OptionText>[@]</OptionText>
-					<AfterText>[@]</AfterText>
+					<AfterText>[Juliet] If anyone is around, it should be in the ballroom, right?</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter3b-3</NextChapter>
+				<NextChapter>Chapter4.2</NextChapter>
 				<ButtonId>14</ButtonId>
 			</Option5>
 		</Options>
@@ -207,13 +557,13 @@
 	<Chapter3b-2>
 		<ChapterInfo> Normal </ChapterInfo>
 		<Lines>
-			<Line>[BG:Hall][J]This door seems locked.. Lets check another door.</Line>
+			<Line>[BG:Hall][Juliet]Damn! Why is the door to the kitchen locked.. I wanted to steal a snack before exploring further.</Line>
 		</Lines>
 		<Options>
 			<Option1>
 				<Text>
 					<OptionText>[@]</OptionText>
-					<AfterText>[@]</AfterText>
+					<AfterText>[Juliet] If I can find Romeo anywhere, he’d be drinking in his winery.</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
@@ -224,7 +574,7 @@
 			<Option2>
 				<Text>
 					<OptionText>[@]</OptionText>
-					<AfterText>[@]</AfterText>
+					<AfterText>[Juliet] Maybe I can find some information in the library...</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
@@ -257,79 +607,546 @@
 			<Option5>
 				<Text>
 					<OptionText>[@]</OptionText>
-					<AfterText>[@]</AfterText>
+					<AfterText>[Juliet] If anyone is around, it should be in the ballroom, right?</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter3b-3</NextChapter>
+				<NextChapter>Chapter4.2</NextChapter>
 				<ButtonId>14</ButtonId>
 			</Option5>
 		</Options>
 	</Chapter3b-2>
-	<Chapter3b-3>
+
+	<!--[Winery]-->
+	<Chapter4.1>
 		<ChapterInfo> Normal </ChapterInfo>
 		<Lines>
-			<Line>[BG:Hall][J]Damn! Why is the door to the kitchen locked.. I wanted to steal a snack before exploring further.</Line>
+			<Line>[Narrator][BG:Room3] Juliet sees multiple empty bottles, red colored footsteps and another sword lying on the ground.</Line>
+			<Line>[Narrator] Juliet hurriedly walks towards the door, before opening it. The passage creaks, revealing a dimly-lit winery.</Line>
+			<Line>[Narrator] She walks inside, finding many empty bottles spread out on the floor, with the room looking like a newly made mess.</Line>
+			<Line>[Juliet] There must be some clues I can find here...</Line>
 		</Lines>
 		<Options>
 			<Option1>
 				<Text>
-					<OptionText>[@]</OptionText>
-					<AfterText>[@]</AfterText>
+					<OptionText> [@] </OptionText>
+					<AfterText> [Juliet] They’re all spread out, and appear to be empty… Maybe Romeo is drunk after all. </AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter4-Room1-part2</NextChapter>
-				<ButtonId>8</ButtonId>
+				<NextChapter>Chapter4.1b</NextChapter>
+				<ButtonId>21</ButtonId>
 			</Option1>
 			<Option2>
 				<Text>
-					<OptionText>[@]</OptionText>
-					<AfterText>[@]</AfterText>
+					<OptionText> [@] </OptionText>
+					<AfterText> [Juliet] These look like footsteps… Leading towards Romeo’s room. But there weren’t any leaving the room… What does this mean? </AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter4-Room2</NextChapter>
-				<ButtonId>9</ButtonId>
+				<NextChapter>Chapter4.1b</NextChapter>
+				<ButtonId>22</ButtonId>
 			</Option2>
 			<Option3>
 				<Text>
-					<OptionText>[@]</OptionText>
-					<AfterText>[@]</AfterText>
+					<OptionText> [@] </OptionText>
+					<AfterText> [Juliet] What’s this sword doing here? </AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter3b-1</NextChapter>
-				<ButtonId>12</ButtonId>
+				<NextChapter>Chapter4.1-sword</NextChapter>
+				<ButtonId>23</ButtonId>
 			</Option3>
-			<Option4>
-				<Text>
-					<OptionText>[@]</OptionText>
-					<AfterText>[@]</AfterText>
-				</Text>
-				<prerequirement> none </prerequirement>
-				<unlockrequirement> none </unlockrequirement>
-				<Points>0</Points>
-				<NextChapter>Chapter3b-2</NextChapter>
-				<ButtonId>13</ButtonId>
-			</Option4>
-			<Option5>
-				<Text>
-					<OptionText>[@]</OptionText>
-					<AfterText>[@]</AfterText>
-				</Text>
-				<prerequirement> none </prerequirement>
-				<unlockrequirement> none </unlockrequirement>
-				<Points>0</Points>
-				<NextChapter>Chapter3b-3</NextChapter>
-				<ButtonId>14</ButtonId>
-			</Option5>
 		</Options>
-	</Chapter3b-3>
+	</Chapter4.1>
+	<Chapter4.1-sword>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Narrator] The candle shines bright, revealing a red glow on the blade.</Line>
+			<Line>[Juliet] There’s blood on the sword... But whose blood is it?</Line>
+			<Line>[Juliet] It has Romeo’s name engraved on it as well…</Line>
+			<Line>[Juliet] More importantly, this sword is only used for traditional duels. He must've pissed someone off again.</Line>
+			<Line>[Juliet] That would at least explain why the room is so messed up.</Line>
+			<Line>[Juliet] Romeo o Romeo… Please be safe.</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> [@] </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter4.1b</NextChapter>
+				<ButtonId>fbt</ButtonId>
+			</Option1>
+		</Options>
+	</Chapter4.1-sword>
+	
+	<Chapter4.1b>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Narrator] Loud banging now fills the silence, afterwards accompanied by distant shouting.</Line>
+			<Line>[Juliet] Who is that? What’s happening??</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> Run to the hallway </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter4.1c-run</NextChapter>
+				<ButtonId>0</ButtonId>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText> Carefully look in the hallway </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter4.1c-look</NextChapter>
+				<ButtonId>1</ButtonId>
+			</Option2>
+			<Option3>
+				<Text>
+					<OptionText> Stay in the room </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter4.1c-stay</NextChapter>
+				<ButtonId>2</ButtonId>
+			</Option3>
+		</Options>
+	</Chapter4.1b>
+
+	<Chapter4.1c-run>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Juliet] Someone must be in the hall!</Line>
+			<Line>[Narrator] She quickly opens the door without hesitation, ignoring possible dangers.</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> [@] </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter5.1</NextChapter>
+				<ButtonId>fbt</ButtonId>
+			</Option1>
+		</Options>
+	</Chapter4.1c-run>
+	<Chapter4.1c-look>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Narrator] She quietly tips to the door, laying her hands on the knob.</Line>
+			<Line>[Narrator] Unknowing of what has happened, or what’s to come,  she opens the door until there’s a slit to see through.</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> [@] </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter5.2</NextChapter>
+				<ButtonId>fbt</ButtonId>
+			</Option1>
+		</Options>
+	</Chapter4.1c-look>
+	<Chapter4.1c-stay>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Juliet] I-I can’t... Something bad is happening...</Line>
+			<Line>[Juliet] I’m scared...</Line>
+			<Line>[Juliet] Romeo...</Line>
+			<Line>[Narrator] A whisper is heard.</Line>
+			<Line>[???] Juliet...</Line>
+			<Line>[Juliet] ...?!</Line>
+			<Line>[???] It were a grief so brief to part with thee. But it is not farewell. Not yet.</Line>
+			<Line>[Narrator] The pain returns to her chest, this time too much to bear.</Line>
+			<Line>[Narrator] Her vision weakens, seeing only a flash of white light, upon which her vision turns to black.</Line>
+			<Line>[Narrator] Her hearing goes next.</Line>
+			<Line>[Narrator] Then her touch.</Line>
+			<Line>[Narrator] Lastly, her mind.</Line>
+			<Line>[Narrator] Ready to go, but never to return.</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> [@] </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Ending5</NextChapter>
+				<ButtonId>fbt</ButtonId>
+			</Option1>
+		</Options>
+	</Chapter4.1c-stay>
+	
+	<!--[Ballroom]-->
+	<Chapter4.2>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>...</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> .. </OptionText>
+					<AfterText> .. </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter..</NextChapter>
+				<ButtonId>..</ButtonId>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText> .. </OptionText>
+					<AfterText> .. </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter..</NextChapter>
+				<ButtonId>..</ButtonId>
+			</Option2>
+			<Option3>
+				<Text>
+					<OptionText> .. </OptionText>
+					<AfterText> .. </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter..</NextChapter>
+				<ButtonId>..</ButtonId>
+			</Option3>
+		</Options>
+	</Chapter4.2>
+	<!--[Library]-->
+	<Chapter4.3>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[BG:Room2]...</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> [@] </OptionText>
+					<AfterText> [Juliet] There’s a note! So Romeo is trying to frame Tybalt for killing everyone? What do I hear in the hallway!? </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter5</NextChapter>
+				<ButtonId>17</ButtonId>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText> [@] </OptionText>
+					<AfterText> [Juliet] There’s a note! So Tybalt killed everyone? What do I hear in the hallway!? </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter5</NextChapter>
+				<ButtonId>18</ButtonId>
+			</Option2>
+		</Options>
+	</Chapter4.3>
+		
+	<!--[SecretRoom]-->
+	<!--[Hall (return)]-->
+	<Chapter5.1>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Narrator][BG:Hall] Upon entering the hall, Juliet sees Tybalt struggling with something.</Line>
+			<Line>[Narrator] Suddenly... she sees Romeo.</Line>
+			<Line>[Juliet] Romeo! There you are!</Line>
+			<Line>[Juliet] But-...</Line>
+			<Line>[Juliet] Romeo?</Line>
+			<Line>[Narrator] Juliet looks confused to Romeo's ghostly body, floating as he attacks Tybalt.</Line>
+			<Line>[Narrator] Neither of the boys noticed Juliet as they are too occupied with their fight.</Line>
+			<Line>[Narrator] Juliet stares at both of them and notices Tybalt is heavily wounded in the side.</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> ROMEO!!! </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter5.1b-romeo</NextChapter>
+				<ButtonId>0</ButtonId>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText> TYBALT!!! </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter5.1b-tybalt</NextChapter>
+				<ButtonId>1</ButtonId>
+			</Option2>
+		</Options>
+	</Chapter5.1>
+	
+	<Chapter5.1b-romeo>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Romeo] Juliet! There you are! I’ve been looking for you.</Line>
+			<Line>[Juliet] Looking for me? I’m the one who's been looking for you all over this place!</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> What happened?! </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter5.1b-romeo-2a</NextChapter>
+				<ButtonId>0</ButtonId>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText> Why are you guys fighting?! </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter5.1b-romeo-2b</NextChapter>
+				<ButtonId>1</ButtonId>
+			</Option2>
+		</Options>
+	</Chapter5.1b-romeo>
+	<Chapter5.1b-romeo-2a>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Romeo] Tybalt killed everyone, help me kill him!.</Line>
+			<Line>[Narrator] Juliet looks at Tybalt.</Line>
+			<Line>[Tybalt]Juliet it wasnt me, trust me.</Line>
+			<Line>[Tybalt] Juliet you should run.</Line>
+			<Line>[Romeo] Hurry!</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> Kill Tybalt </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter5.1b-romeo-kill</NextChapter>
+				<ButtonId>0</ButtonId>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText> Don't kill Tybalt </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter5.1b-romeo-nokill</NextChapter>
+				<ButtonId>1</ButtonId>
+			</Option2>
+		</Options>
+	</Chapter5.1b-romeo-2a>
+	<Chapter5.1b-romeo-2b>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Romeo] I’m just getting rid of a murder! Help me get revenge.</Line>
+			<Line>[Tybalt] I only killed you because you wouldve killed me otherwise!</Line>
+			<Line>[Romeo] see! he admits it! Hes a murder! Now kill him for me!</Line>
+			<Line>[Tybalt] Juliet it wasn't my fault please trust me!</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> Kill Tybalt </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter5.1b-romeo-kill</NextChapter>
+				<ButtonId>0</ButtonId>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText> Don't kill Tybalt </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter5.1b-romeo-nokill</NextChapter>
+				<ButtonId>1</ButtonId>
+			</Option2>
+		</Options>
+	</Chapter5.1b-romeo-2b>
+
+	<Chapter5.1b-romeo-kill>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Romeo] Tybalt killed everyone, help me kill him!.</Line>
+			<Line>[Narrator] Juliet looks at Tybalt.</Line>
+			<Line>[Tybalt]Juliet it wasnt me, trust me.</Line>
+			<Line>[Tybalt] Juliet you should run.</Line>
+			<Line>[Romeo] Hurry!</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> Kill Tybalt </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter</NextChapter>
+				<ButtonId>0</ButtonId>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText> Don't kill Tybalt </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter</NextChapter>
+				<ButtonId>1</ButtonId>
+			</Option2>
+		</Options>
+	</Chapter5.1b-romeo-kill>
+	<Chapter5.1b-romeo-nokill>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Romeo] Tybalt killed everyone, help me kill him!.</Line>
+			<Line>[Narrator] Juliet looks at Tybalt.</Line>
+			<Line>[Tybalt]Juliet it wasnt me, trust me.</Line>
+			<Line>[Tybalt] Juliet you should run.</Line>
+			<Line>[Romeo] Hurry!</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> Kill Tybalt </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter</NextChapter>
+				<ButtonId>0</ButtonId>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText> Don't kill Tybalt </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter</NextChapter>
+				<ButtonId>1</ButtonId>
+			</Option2>
+		</Options>
+	</Chapter5.1b-romeo-nokill>
+	
+	
+
+	<Chapter5.1b-tybalt>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Narrator] Upon entering the hall, Juliet sees Tybalt struggling with something.</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> ROMEO!!! </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter</NextChapter>
+				<ButtonId>0</ButtonId>
+			</Option1>
+			<Option2>
+				<Text>
+					<OptionText> TYBALT!!! </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter</NextChapter>
+				<ButtonId>1</ButtonId>
+			</Option2>
+		</Options>
+	</Chapter5.1b-tybalt>
+	
+	
+	
+	<Chapter5.2>
+		<ChapterInfo> Normal </ChapterInfo>
+		<Lines>
+			<Line>[Narrator][BG:Hall] --</Line>
+			<Line>[Juliet] --</Line>
+		</Lines>
+		<Options>
+			<Option1>
+				<Text>
+					<OptionText> [@] </OptionText>
+					<AfterText> [@] </AfterText>
+				</Text>
+				<prerequirement> none </prerequirement>
+				<unlockrequirement> none </unlockrequirement>
+				<Points>0</Points>
+				<NextChapter>Chapter</NextChapter>
+				<ButtonId>fbt</ButtonId>
+			</Option1>
+		</Options>
+	</Chapter5.2>
+	
+	
+	
+	
+	
+	
+	<!--[old]-->
 	<Chapter4-Room1-part1>
 		<ChapterInfo> Normal </ChapterInfo>
 		<Lines>
@@ -358,7 +1175,7 @@
 			<Option1>
 				<Text>
 					<OptionText>Go through the door</OptionText>
-					<AfterText>[J]There’s a note! So Romeo is trying to frame Tybalt for killing everyone? What do I hear in the hallway!?</AfterText>
+					<AfterText>[J]What a strange room... What is this? A note!? So Romeo is trying to frame Tybalt for killing everyone? What do I hear in the hallway!?</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> door </unlockrequirement>
@@ -382,30 +1199,30 @@
 	<Chapter4-Room2>
 		<ChapterInfo> Normal </ChapterInfo>
 		<Lines>
-			<Line>[BG:Room2][J]There is a strage note over there! Also.. where does that suspicious door lead to?</Line>
+			<Line>[BG:Room2][J]There is a strage note over there! Also.. what is that?</Line>
 		</Lines>
 		<Options>
 			<Option1>
 				<Text>
-					<OptionText>Go through the door</OptionText>
+					<OptionText>[@]</OptionText>
 					<AfterText>[J]There’s a note! So Romeo is trying to frame Tybalt for killing everyone? What do I hear in the hallway!?</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> door </unlockrequirement>
 				<Points>0</Points>
 				<NextChapter>Chapter5</NextChapter>
-				<ButtonId>10</ButtonId>
+				<ButtonId>17</ButtonId>
 			</Option1>
 			<Option2>
 				<Text>
-					<OptionText>I dont trust that door</OptionText>
+					<OptionText>[@]</OptionText>
 					<AfterText>[J]There’s a note! So Tybalt killed everyone? What do I hear in the hallway!? </AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
 				<NextChapter>Chapter5</NextChapter>
-				<ButtonId>11</ButtonId>
+				<ButtonId>18</ButtonId>
 			</Option2>
 		</Options>
 	</Chapter4-Room2>
@@ -522,7 +1339,7 @@
 		<Options>
 			<Option1>
 				<Text>
-					<OptionText> Hide behind the stairs </OptionText>
+					<OptionText> Hide by posing as a statue </OptionText>
 					<AfterText>[@]</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
@@ -533,7 +1350,7 @@
 			</Option1>
 			<Option2>
 				<Text>
-					<OptionText> Hide with a vase on your head </OptionText>
+					<OptionText> Hide behind the stairs </OptionText>
 					<AfterText>[@]</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
@@ -574,7 +1391,7 @@
 		<Options>
 			<Option1>
 				<Text>
-					<OptionText> Hide behind the stairs </OptionText>
+					<OptionText> Hide in the curtains </OptionText>
 					<AfterText>[@]</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
@@ -585,7 +1402,7 @@
 			</Option1>
 			<Option2>
 				<Text>
-					<OptionText> Hide with a vase on your head </OptionText>
+					<OptionText> Hide under a pile of books </OptionText>
 					<AfterText>[@]</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
@@ -596,17 +1413,6 @@
 			</Option2>
 			<Option3>
 				<Text>
-					<OptionText> Hide in suspicious room </OptionText>
-					<AfterText>[@]</AfterText>
-				</Text>
-				<prerequirement> door </prerequirement>
-				<unlockrequirement> none </unlockrequirement>
-				<Points>0</Points>
-				<NextChapter>Ending4</NextChapter>
-				<ButtonId>2</ButtonId>
-			</Option3>
-			<Option4>
-				<Text>
 					<OptionText> Timeout </OptionText>
 					<AfterText>Unable to hide, Romeo catches you.</AfterText>
 				</Text>
@@ -615,7 +1421,7 @@
 				<Points>0</Points>
 				<NextChapter>Ending3</NextChapter>
 				<ButtonId>[@]</ButtonId>
-			</Option4>
+			</Option3>
 		</Options>
 	</Chapter8-Room2>
 

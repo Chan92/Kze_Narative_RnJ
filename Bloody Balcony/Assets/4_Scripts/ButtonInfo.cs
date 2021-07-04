@@ -38,6 +38,12 @@ public class ButtonInfo : MonoBehaviour{
 			//StopCoroutine(Manager.instance.timedOptionTimer);
 		}
 
+		//---- check for shout in bedroom {HARDCODED EW}
+		if(buttonTextField.text.Contains("Remain quiet")) {
+			BedroomPuzzle.instance.SetSearchCount(3);
+		}
+		//----
+
 		Manager.instance.timerOnDirtFix = false;
 		Manager.instance.debugTimer.gameObject.SetActive(false);
 

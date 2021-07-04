@@ -7,8 +7,10 @@ using UnityEngine.UI;
 public class Manager : MonoBehaviour{
 	public static Manager instance;
 
+	public GameObject fullscreenBt;
 	public Text debugTimer;
 
+	[Space(15)]
 	public ButtonInfo[] btInfo;
 	public Text dialogBox;
 	public GameObject startMenu;
@@ -16,9 +18,16 @@ public class Manager : MonoBehaviour{
 	public SpriteRenderer backgroundObj;
 	public Sprite[] backgroundSprites;
 	public GameObject julietNametag;
+	public GameObject[] roomItems;
 
+	[Space(15)]
+	public Texture2D candleCursor;
+	public GameObject candleFire;
+	public GameObject circleCutout;
+	public GameObject blackscreen;
+
+	[Space(15)]
 	public bool buttonsActive = false;
-
 	public List<string> acquiredRequirements = new List<string>();
 	public Coroutine timedOptionTimer;
 	public bool timerOnDirtFix = false;
@@ -28,6 +37,7 @@ public class Manager : MonoBehaviour{
 	}
 
 	private void Start() {
+		fullscreenBt.SetActive(false);
 		startMenu.SetActive(true);
 		debugTimer.gameObject.SetActive(false);
 		julietNametag.SetActive(false);
@@ -37,6 +47,8 @@ public class Manager : MonoBehaviour{
 		for(int i = 0; i < endingScreens.Length; i++) {
 			endingScreens[i].SetActive(false);
 		}
+		
+		LitCandle(false);
 	}
 
 	private void Update() {
@@ -56,6 +68,7 @@ public class Manager : MonoBehaviour{
 
 	public void SetButtons() {
 		buttonsActive = false;
+		fullscreenBt.SetActive(false);
 
 		for(int i = 0; i < btInfo.Length; i++) {
 			btInfo[i].gameObject.SetActive(false);
@@ -106,5 +119,11 @@ public class Manager : MonoBehaviour{
 			if(i < s.Length - 1) dialogBox.text += "";
 			yield return new WaitForSeconds(0);
 		}
+	}
+
+	public void LitCandle(bool lit) {
+		blackscreen.SetActive(!lit);
+		circleCutout.SetActive(lit);
+		candleFire.SetActive(lit);
 	}
 }

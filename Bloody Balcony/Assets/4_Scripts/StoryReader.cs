@@ -89,17 +89,30 @@ public class StoryReader:MonoBehaviour {
 		//str = StringReplace(str);
 
 		if(!str.Contains("[@]") && str != null) {
-			str = NameCheck(str);
-			str = CheckBackground(str);
+			str = CheckLine(str);
 			//	str = CheckExpressions(str);
 			//	str = CheckSoundEffects(str);
 			Manager.instance.dialogBox.text = str;
 		} else if(str.Contains("[@]")) {
-			str = NameCheck(str);
-			str = CheckBackground(str);
+			str = CheckLine(str);
 			str = "";
 			Manager.instance.dialogBox.text = str;
 		}
+	}
+
+	string CheckLine(string s) {
+		s = NameCheck(s);
+		s = CheckBackground(s);
+
+		if(s.Contains("[FindCandle]")) {
+			s = s.Replace("[FindCandle]", "");
+			Cursor.SetCursor(Manager.instance.candleCursor, Vector2.zero, CursorMode.Auto);
+		} else if(s.Contains("[LitCandle]")) {
+			s = s.Replace("[LitCandle]", "");
+			Manager.instance.LitCandle(true);
+		}
+
+		return s;
 	}
 
 	void GetXmlButtonInfo(XmlNodeList nl, int buttonId) {
@@ -118,7 +131,8 @@ public class StoryReader:MonoBehaviour {
 		if((preReq.Contains("none") || preReq.Contains("None")) || Manager.instance.acquiredRequirements.Contains(preReq)) {
 			//timeout options are invisible, automaticly chosen when timed out
 			if(!buttonText.Contains("timeout") && !buttonText.Contains("Timeout")) {
-
+				nextChapter = CheckNextChapter(nextChapter);
+				
 				//aftertext
 				if(afterText != null) {
 					//afterText = StringReplace(afterText);
@@ -128,15 +142,31 @@ public class StoryReader:MonoBehaviour {
 				}
 
 				//set info & enable button
-				buttonObjectId = int.Parse(bId);
-				Manager.instance.btInfo[buttonObjectId].SetInfo(buttonText, afterText, unlock, points, nextChapter);
-				Manager.instance.btInfo[buttonObjectId].gameObject.SetActive(true);
+				if(bId == "fbt") {
+					Manager.instance.fullscreenBt.GetComponent<ButtonInfo>().SetInfo(buttonText, afterText, unlock, points, nextChapter);
+					Manager.instance.fullscreenBt.SetActive(true);
+				} else {
+					buttonObjectId = int.Parse(bId);
+					Manager.instance.btInfo[buttonObjectId].SetInfo(buttonText, afterText, unlock, points, nextChapter);
+					Manager.instance.btInfo[buttonObjectId].gameObject.SetActive(true);
+				}						
 			} else {
 				timeoutAfterText = afterText;
 				timeoutOptionPoints = int.Parse(points);
 				timeoutNextChapter = nextChapter;
 			}
 		}
+	}
+
+	string CheckNextChapter(string nextCh) {
+		if(nextCh.Contains("NEXT")) {
+			if(nextCh == "NEXT-Bedroom") {
+				nextCh = BedroomPuzzle.instance.CheckCurrentCount();
+			} else if(nextCh == "NEXT-Winery") {
+			
+			}
+		}
+		return nextCh;
 	}
 
 	private void ChosenTimeoutButton() {
@@ -180,6 +210,12 @@ public class StoryReader:MonoBehaviour {
 		if(s.Contains("[J]")) {
 			s = s.Replace("[J]", "");
 			Manager.instance.julietNametag.SetActive(true);
+		} else if(s.Contains("[Juliet]")) {
+			s = s.Replace("[Juliet]", "");
+			Manager.instance.julietNametag.SetActive(true);
+		} else if(s.Contains("[Narrator]")) {
+			s = s.Replace("[Narrator]", "");
+			Manager.instance.julietNametag.SetActive(false);
 		} else {
 			Manager.instance.julietNametag.SetActive(false);
 		}
@@ -212,28 +248,49 @@ public class StoryReader:MonoBehaviour {
 		if(s.Contains("[BG:Balcony]")) {
 			s = s.Replace("[BG:Balcony]", "");
 			Manager.instance.ChangeBackgrounds(0);
+			SetRoomItems(0);
 		}
 		if(s.Contains("[BG:Bedroom]")) {
 			s = s.Replace("[BG:Bedroom]", "");
 			Manager.instance.ChangeBackgrounds(1);
+			SetRoomItems(1);
 		}
 		if(s.Contains("[BG:Hall]")) {
 			s = s.Replace("[BG:Hall]", "");
 			Manager.instance.ChangeBackgrounds(2);
+			SetRoomItems(0);
 		}
 		if(s.Contains("[BG:Room1]")) {
 			s = s.Replace("[BG:Room1]", "");
 			Manager.instance.ChangeBackgrounds(3);
+			SetRoomItems(3);
 		}
 		if(s.Contains("[BG:Room2]")) {
 			s = s.Replace("[BG:Room2]", "");
 			Manager.instance.ChangeBackgrounds(4);
+			SetRoomItems(2);
 		}
 		if(s.Contains("[BG:SecretRoom]")) {
 			s = s.Replace("[BG:SecretRoom]", "");
 			Manager.instance.ChangeBackgrounds(5);
+			SetRoomItems(0);
+		}
+		if(s.Contains("[BG:Room3]")) {
+			s = s.Replace("[BG:Room3]", "");
+			Manager.instance.ChangeBackgrounds(6);
+			SetRoomItems(4);
 		}
 
 		return s;
+	}
+
+	private void SetRoomItems(int id) {
+		for(int i = 0; i < Manager.instance.roomItems.Length; i++) {
+			Manager.instance.roomItems[i].SetActive(false);
+		}
+
+		if(id - 1 >= 0) {
+			Manager.instance.roomItems[id -1].SetActive(true);
+		}
 	}
 }
