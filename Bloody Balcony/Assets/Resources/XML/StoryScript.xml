@@ -1302,6 +1302,7 @@
 	<Chapter6-tybalt>
 		<ChapterInfo> Timed2 </ChapterInfo>
 		<Lines>
+			<Line>[Narrator] Juliet runs while Tybalt holds off Romeo, giving her some extra time.</Line>
 			<Line>[Juliet] Which room should I run to...</Line>
 		</Lines>
 		<Options>
@@ -1351,132 +1352,101 @@
 			</Option4>
 		</Options>
 	</Chapter6-tybalt>
-
 	<Chapter6.1-winery-tybalt>
-		<ChapterInfo> Timed </ChapterInfo>
+		<ChapterInfo> Normal </ChapterInfo>
 		<Lines>
-			<Line>[Juliet] Where should I hide...</Line>
+			<Line>[Juliet] Is there any place we can hide here?</Line>
+			<Line>[Narrative] Juliet searches around to think of a good spot. But soon after Romeo and Tybalt already came racing in.</Line>
+			<Line>[Romeo] There is nowhere to hide for you now!</Line>
+			<Line>[Tybalt] Juliet.. We can't run or hide.. There's only one option left.</Line>
+			<Line>[Narrative] Juliet nods sadly as she knows what he means.</Line>
+			<Line>[Narrative] Juliet walks to Romeo and takes a deep breath.</Line>
+			<Line>[Juliet] Give me that poison… I will take it.</Line>
+			<Line>[Narrative] Romeo looks enlightened to her decision and gives her the poison.</Line>
+			<Line>[Narrative] Juliet grabs the bottle and takes her sweet time to drink it.</Line>
+			<Line>[Juliet] Romeo… Are you really sure you want us dead?</Line>
+			<Line>[Romeo] If you hesitate now, I can just force it down your throat.</Line>
+			<Line>[Narrative] Juliet shud her head and looked over at Tybalt.</Line>
+			<Line>[Narrative] When she sees she bought him enough time, she throws the poison bottle away and jumps aside.</Line>
+			<Line>[Narrative] Tybalt jumps in front of her and holds out a cross that banishes ghosts.</Line>
+			<Line>[Romeo] YOU TRICKED ME! YOU WERE JUST BUYING TIME FOR HIM!</Line>
+			<Line>[Juliet] Yes I was! I don't want to die but you won't listen!</Line>
+			<Line>[Romeo] YOU!!!!!</Line>
+			<Line>[Narrative] Romeo’s ghost disappears in a rage.</Line>
+			<Line>[Juliet] We did it Tybalt! We are safe now!</Line>
+			<Line>[Narrative] Juliet looks over at Tybalt who isn't responding. But he has already passed away from his wounds.</Line>
+			<Line>[Juliet] Tybalt...</Line>
+			<Line>[Juliet] "Death, that hath sucked the honey of thy breath,Hath had no power yet upon thy beauty."</Line>
 		</Lines>
 		<Options>
 			<Option1>
 				<Text>
-					<OptionText> Hide under the stairs </OptionText>
-					<AfterText> [Romeo] You've chosen an interesting place to die at. </AfterText>
+					<OptionText> [@] </OptionText>
+					<AfterText> [@] </AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Ending3</NextChapter>
-				<ButtonId>0</ButtonId>
+				<NextChapter>Ending7</NextChapter>
+				<ButtonId>fbt</ButtonId>
 			</Option1>
-			<Option2>
-				<Text>
-					<OptionText> Hide in a wine barrel  </OptionText>
-					<AfterText> [Narrator] Unable to find Juliet, Romeo left </AfterText>
-				</Text>
-				<prerequirement> none </prerequirement>
-				<unlockrequirement> none </unlockrequirement>
-				<Points>0</Points>
-				<NextChapter>Ending6</NextChapter>
-				<ButtonId>1</ButtonId>
-			</Option2>
-			<Option3>
-				<Text>
-					<OptionText> Hide behind a pillar </OptionText>
-					<AfterText>[Romeo] I can see you!</AfterText>
-				</Text>
-				<prerequirement> none </prerequirement>
-				<unlockrequirement> none </unlockrequirement>
-				<Points>0</Points>
-				<NextChapter>Ending3</NextChapter>
-				<ButtonId>2</ButtonId>
-			</Option3>
-			<Option4>
-				<Text>
-					<OptionText> Timeout </OptionText>
-					<AfterText>Unable to run away, Romeo catches you.</AfterText>
-				</Text>
-				<prerequirement> none </prerequirement>
-				<unlockrequirement> none </unlockrequirement>
-				<Points>0</Points>
-				<NextChapter>Ending3</NextChapter>
-				<ButtonId>[@]</ButtonId>
-			</Option4>
 		</Options>
 	</Chapter6.1-winery-tybalt>
 	<Chapter6.3-Library-tybalt>
-		<ChapterInfo> Timed </ChapterInfo>
+		<ChapterInfo> Normal </ChapterInfo>
 		<Lines>
-			<Line>[Juliet] Wrong room! There is nowhere to hide!</Line>
+			<Line>[Tybalt] Why did you go to this room?! There is nowhere to hide!</Line>
+			<Line>[Juliet] I don’t know.. I was in panic..</Line>
+			<Line>[Juliet] Do you think we can jump out of this window?</Line>
+			<Line>[Tybalt] We can’t, its too high</Line>
+			<Line>[Romeo] HAHAHA! You're both foolish! Now die!</Line>
 		</Lines>
 		<Options>
 			<Option1>
 				<Text>
-					<OptionText> Timeout </OptionText>
-					<AfterText>[Romeo] Found you!</AfterText>
+					<OptionText> [@] </OptionText>
+					<AfterText>[@]</AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
 				<NextChapter>Ending3</NextChapter>
-				<ButtonId>[@]</ButtonId>
+				<ButtonId>fbt</ButtonId>
 			</Option1>
 		</Options>
 	</Chapter6.3-Library-tybalt>
 	<Chapter6.1-ballroom-tybalt>
-		<ChapterInfo> Timed </ChapterInfo>
+		<ChapterInfo> Normal </ChapterInfo>
 		<Lines>
-			<Line>[Juliet] Where should I hide...</Line>
+			[???] It’s Tybalt!
+			[???] It's the one who killed us all!
+			[???] Yeah! Romeo told us!
+			[Juliet] Who are all these voices? Where did they come from?
+			[Tybalt] Juliet watchout!
+			[Narrative] Juliet looks up and sees the whole hall filled with ghosts.
+			[???] We have to get our revenge!
+			[Narrative] The ghosts start to attack Tybalt.
+			[Narrative] Juliet tries to help Tybalt but is unable to.
+			[Narrative] Tybalt passes away and Juliet sits next to him in disbelief.
+			[Juliet] Tybalt.. You were the last one I had left…
+			[Narrative] With no time to mourn for Tybalt, Romeo shows up.
+			[Narrative] Juliet tried to stand up and run away but her shaken legs made her trip and fall down again.
+			[Romeo] Don't worry Juliet, we will be together in the afterlife.
 		</Lines>
 		<Options>
 			<Option1>
 				<Text>
-					<OptionText>  Hide by posing as a statue </OptionText>
-					<AfterText> [Romeo] You thought I wouldnt notice...? </AfterText>
+					<OptionText>  [@] </OptionText>
+					<AfterText> [@] </AfterText>
 				</Text>
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
 				<NextChapter>Ending3</NextChapter>
-				<ButtonId>0</ButtonId>
+				<ButtonId>fbt</ButtonId>
 			</Option1>
-			<Option2>
-				<Text>
-					<OptionText> Hide behind the stairs  </OptionText>
-					<AfterText> [Romeo] I found you! </AfterText>
-				</Text>
-				<prerequirement> none </prerequirement>
-				<unlockrequirement> none </unlockrequirement>
-				<Points>0</Points>
-				<NextChapter>Ending3</NextChapter>
-				<ButtonId>1</ButtonId>
-			</Option2>
-			<Option3>
-				<Text>
-					<OptionText> Hide in secret room </OptionText>
-					<AfterText>[@]</AfterText>
-				</Text>
-				<prerequirement> door </prerequirement>
-				<unlockrequirement> none </unlockrequirement>
-				<Points>0</Points>
-				<NextChapter>Ending4</NextChapter>
-				<ButtonId>2</ButtonId>
-			</Option3>
-			<Option4>
-				<Text>
-					<OptionText> Timeout </OptionText>
-					<AfterText>Unable to run away, Romeo catches you.</AfterText>
-				</Text>
-				<prerequirement> none </prerequirement>
-				<unlockrequirement> none </unlockrequirement>
-				<Points>0</Points>
-				<NextChapter>Ending3</NextChapter>
-				<ButtonId>[@]</ButtonId>
-			</Option4>
 		</Options>
 	</Chapter6.1-ballroom-tybalt>
-
-
 
 	<!--[Time rush started, Tybalt dead]-->
 	<Chapter6>
