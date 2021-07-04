@@ -63,7 +63,7 @@ public class StoryReader:MonoBehaviour {
 				Debug.Log("Error?");
 			}
 		} else {
-			Debug.LogError("Missing Chapter.");
+			Debug.LogError("Missing Chapter. Chapter name: " + chapter);
 		}
 	}
 

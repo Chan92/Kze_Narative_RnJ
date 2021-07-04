@@ -505,7 +505,7 @@
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter4-Room1-part2</NextChapter>
+				<NextChapter>Chapter4.1</NextChapter>
 				<ButtonId>8</ButtonId>
 			</Option1>
 			<Option2>
@@ -516,7 +516,7 @@
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter4-Room2</NextChapter>
+				<NextChapter>Chapter4.2</NextChapter>
 				<ButtonId>9</ButtonId>
 			</Option2>
 			<Option3>
@@ -549,7 +549,7 @@
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter4.2</NextChapter>
+				<NextChapter>Chapter4.3</NextChapter>
 				<ButtonId>14</ButtonId>
 			</Option5>
 		</Options>
@@ -568,7 +568,7 @@
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter4-Room1-part2</NextChapter>
+				<NextChapter>Chapter4.1</NextChapter>
 				<ButtonId>8</ButtonId>
 			</Option1>
 			<Option2>
@@ -579,7 +579,7 @@
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter4-Room2</NextChapter>
+				<NextChapter>Chapter4.2</NextChapter>
 				<ButtonId>9</ButtonId>
 			</Option2>
 			<Option3>
@@ -612,7 +612,7 @@
 				<prerequirement> none </prerequirement>
 				<unlockrequirement> none </unlockrequirement>
 				<Points>0</Points>
-				<NextChapter>Chapter4.2</NextChapter>
+				<NextChapter>Chapter4.3</NextChapter>
 				<ButtonId>14</ButtonId>
 			</Option5>
 		</Options>
